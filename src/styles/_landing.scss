@@ -82,6 +82,16 @@
   margin-bottom: 80px;
   margin-top: 100px;
 
+  @include respond-to("medium") {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    gap: $spacing-md;
+    margin-bottom: 50px;
+  }
+
   @include respond-to("small") {
     flex-direction: column;
     align-items: center;
@@ -100,6 +110,14 @@
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     z-index: 10;
+
+    @include respond-to("medium") {
+      position: static;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto 20px auto;
+      order: -1;
+    }
 
     @include respond-to("small") {
       position: static;
@@ -120,6 +138,10 @@
     max-width: 450px;
     z-index: 2;
     text-align: center;
+
+    @include respond-to("medium") {
+      max-width: 100%;
+    }
 
     @include respond-to("small") {
       max-width: 100%;
@@ -163,6 +185,13 @@
       top: 50%;
       transform: translateY(-50%);
 
+      @include respond-to("medium") {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+      }
+
       @include respond-to("small") {
         position: relative;
         right: auto;
@@ -186,6 +215,13 @@
       left: 150px;
       top: 50%;
       transform: translateY(-50%);
+
+      @include respond-to("medium") {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+      }
 
       @include respond-to("small") {
         position: relative;
@@ -211,6 +247,13 @@
       top: 50%;
       transform: translateY(-50%);
 
+      @include respond-to("medium") {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+      }
+
       @include respond-to("small") {
         position: relative;
         right: auto;
@@ -234,6 +277,13 @@
       left: 150px;
       top: 50%;
       transform: translateY(-50%);
+
+      @include respond-to("medium") {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+      }
 
       @include respond-to("small") {
         position: relative;

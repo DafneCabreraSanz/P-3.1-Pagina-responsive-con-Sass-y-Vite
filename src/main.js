@@ -1,34 +1,6 @@
 // Importar estilos
 import './styles/main.scss';
 
-// ===== MENÚ MÓVIL =====
-const menuBtn = document.getElementById('menuBtn');
-const mobileNav = document.getElementById('mobileNav');
-const closeNav = document.getElementById('closeNav');
-const overlay = document.getElementById('overlay');
-
-if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-        mobileNav.classList.add('active');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-}
-
-if (closeNav) {
-    closeNav.addEventListener('click', closeMobileMenu);
-}
-
-if (overlay) {
-    overlay.addEventListener('click', closeMobileMenu);
-}
-
-function closeMobileMenu() {
-    mobileNav.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
 // ===== VALIDACIÓN DE FORMULARIO =====
 const registrationForm = document.getElementById('registrationForm');
 

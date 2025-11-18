@@ -8,12 +8,12 @@
 Proyecto de maquetación responsive de un e-commerce de ropa para bebés llamado "Algodón de Luna". El sitio web incluye una landing page con categorías de productos organizadas por temporadas (Otoño, Invierno, Primavera, Verano) y un formulario de registro de usuarios.
 
 ### Características principales:
-- ✨ Diseño responsive adaptado a móvil y desktop
-- 🎨 Sistema de diseño basado en variables SASS exportadas desde Figma
-- 📱 Menú hamburguesa para dispositivos móviles con overlay
-- 🔐 Formulario de registro con validación en tiempo real
-- 🎯 Arquitectura SASS modular con sistema @use/@forward
-- 🖼️ Imágenes circulares de bebés integradas en las secciones de temporada
+- Diseño responsive adaptado a móvil y desktop
+- Sistema de diseño basado en variables SASS exportadas desde Figma
+- Menú hamburguesa para dispositivos móviles con overlay
+- Formulario de registro con validación en tiempo real
+- Arquitectura SASS modular con sistema @use/@forward
+- Imágenes circulares de bebés integradas en las secciones de temporada
 
 ## 2. Tecnologías utilizadas
 
@@ -120,7 +120,6 @@ npm run build
   - Móvil: Layout vertical con imagen circular (250px) centrada encima del texto
 - **Header**: 
   - Desktop: Logo centrado con acciones en ambos lados
-  - Móvil: Menú hamburguesa con overlay oscuro
 - **Formulario**: 2 columnas → 1 columna en móvil
 - **Imágenes circulares**: Posicionamiento absoluto en desktop, estático y centrado en móvil
 - **Espaciados**: Ajuste de márgenes y paddings según viewport

@@ -83,8 +83,8 @@
     overflow: hidden;
 
     @include respond-to("small") {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       font-size: 40px;
     }
 
@@ -104,7 +104,7 @@
     margin: 0;
 
     @include respond-to("small") {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }

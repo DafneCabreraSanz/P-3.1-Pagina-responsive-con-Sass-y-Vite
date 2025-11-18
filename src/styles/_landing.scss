@@ -1,0 +1,248 @@
+@use "globals" as *;
+@use "sass:color";
+
+// Hero Section
+.hero {
+  background-color: $primario-amarillo;
+  padding: $spacing-xl $spacing-md;
+  text-align: center;
+
+  &__title {
+    font-family: $tipografía-título;
+    font-size: $títulos;
+    color: $text-color;
+    margin-bottom: $spacing-lg;
+
+    @include respond-to("small") {
+      font-size: $texto;
+    }
+  }
+
+  &__decorations {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+
+    img {
+      width: 50px;
+
+      @include respond-to("small") {
+        width: 30px;
+      }
+    }
+  }
+}
+
+// Sección de categorías
+.categories {
+  &__grid {
+    @include respond-to("small") {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-md;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-8px);
+
+      .categories__icon {
+        box-shadow: 0 8px 20px rgba($primary-color, 0.2);
+      }
+    }
+  }
+
+  &__icon {
+    img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+    }
+  }
+
+  &__label {
+    font-size: $párrafos;
+    font-weight: 600;
+    color: $text-color;
+
+    @include respond-to("small") {
+      font-size: 14px;
+    }
+  }
+}
+
+// Secciones de temporada
+.season-section {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 80px;
+  margin-top: 100px;
+
+  @include respond-to("small") {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    gap: $spacing-md;
+    margin-bottom: 30px;
+  }
+
+  &__image-circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+
+    @include respond-to("small") {
+      position: static;
+      width: 250px;
+      height: 250px;
+      margin: 0 auto 20px auto;
+      order: -1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    max-width: 450px;
+    z-index: 2;
+    text-align: center;
+
+    @include respond-to("small") {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: $tipografía-título;
+    font-size: 3rem;
+    color: $primario-negro;
+
+    @include respond-to("small") {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    color: $primario-negro;
+
+    @include respond-to("small") {
+      font-size: 1rem;
+    }
+  }
+
+
+
+  // Variantes de color por temporada
+  &--autumn {
+    background: url('/assets/otono.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: left;
+    padding: 20px 0 40px 150px;
+    margin-left: auto;
+    margin-right: 0;
+
+    .season-section__image-circle {
+      right: 150px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include respond-to("small") {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+      }
+    }
+  }
+
+  &--winter {
+    background: url('/assets/invierno.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: right;
+    padding: 20px 150px 40px 0;
+    margin-right: auto;
+    margin-left: 0;
+
+    .season-section__image-circle {
+      left: 150px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include respond-to("small") {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+      }
+    }
+  }
+
+  &--spring {
+    background: url('/assets/primavera.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: left;
+    padding: 20px 0 40px 150px;
+    margin-left: auto;
+    margin-right: 0;
+
+    .season-section__image-circle {
+      right: 150px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include respond-to("small") {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+      }
+    }
+  }
+
+  &--summer {
+    background: url('/assets/verano.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: right;
+    padding: 20px 150px 40px 0;
+    margin-right: auto;
+    margin-left: 0;
+
+    .season-section__image-circle {
+      left: 150px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include respond-to("small") {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+      }
+    }
+  }
+}
+
+

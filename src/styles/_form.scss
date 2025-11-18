@@ -1,0 +1,151 @@
+@use "globals" as *;
+@use "sass:color";
+
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 $spacing-md;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include respond-to("small") {
+    padding: 0 $spacing-sm;
+  }
+}
+
+.form-container {
+  background-color: $primario-amarillo;
+  padding: $spacing-lg $spacing-xl $spacing-xxl $spacing-xl;
+  border-radius: $border-radius-lg;
+  @include soft-shadow;
+  max-width: 750px;
+  width: 100%;
+
+  @include respond-to("small") {
+    padding: $spacing-lg $spacing-md;
+  }
+
+  &__title {
+    font-family: $tipografía-texto;
+    font-size: $formulario;
+    font-weight: 700;
+    text-align: center;
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-lg;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @include respond-to("small") {
+      font-size: 28px;
+    }
+  }
+
+  &__subtitle {
+    font-family: $tipografía-texto;
+    font-size: $párrafos;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    color: color.adjust($text-color, $lightness: -10%);
+
+    @include respond-to("small") {
+      font-size: 16px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-md;
+
+    @include respond-to("small") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__label {
+    font-family: $tipografía-texto;
+    font-size: $párrafos;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  &__input {
+    @include form-input;
+    font-size: $texto;
+    background-color: $secundario-rosa;
+
+    @include respond-to("small") {
+      font-size: 16px;
+    }
+  }
+
+  &__hint {
+    font-size: 14px;
+    margin-top: $spacing-xs;
+    line-height: 1.4;
+
+    @include respond-to("small") {
+      font-size: 12px;
+    }
+  }
+
+  &__checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    margin-top: $spacing-md;
+
+    input[type="checkbox"] {
+      margin-top: 0;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      accent-color: $secundario-rosa;
+      flex-shrink: 0;
+    }
+
+    label {
+      font-size: $párrafos;
+      line-height: $line-height-párrafos;
+      cursor: pointer;
+
+      a {
+        color: $text-color;
+        text-decoration: underline;
+        font-weight: 600;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    @include button($secondary-color, $primary-color);
+    margin-top: $spacing-md;
+    font-size: $texto;
+    padding: $spacing-md $spacing-xl;
+
+    @include respond-to("small") {
+      font-size: 16px;
+      padding: $spacing-sm $spacing-lg;
+    }
+  }
+}
+
+

@@ -1,0 +1,128 @@
+@use "globals" as *;
+
+.footer {
+  background-color: $primario-verde;
+  padding: $spacing-sm $spacing-md;
+  margin-top: $spacing-xl;
+
+  &__container {
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 $container-gutter;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $spacing-md;
+    align-items: center;
+
+    @include respond-to("small") {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    &--left {
+      text-align: left;
+    }
+
+    &--center {
+      text-align: center;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &--right {
+      text-align: right;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+
+  &__section {
+    h4 {
+      font-size: $footer;
+      margin: 0 0 4px 0;
+      color: $primario-negro;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: $footer;
+        color: $primario-negro;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: $footer;
+    color: $primario-negro;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-xl;
+
+    .language-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__logo-img {
+    height: 360px;
+    margin: 0 auto;
+
+    @include respond-to("small") {
+      height: 120px;
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+
+    a {
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  // Alineación en móvil: todo centrado y apilado
+  @include respond-to("small") {
+    &__column,
+    &__column--left,
+    &__column--center,
+    &__column--right {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__social-icons {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+/* Color - Primarios */
+$primario-amarillo: #fff6e8;
+$primario-negro: #000000;
+$primario-verde: #b8e7de;
+
+/* Color - Secundarios */
+$secundario-blanco: #fdfdfb;
+$secundario-rosa: #ffddcc;
+
+/* Layout - Grid */
+$grid-columnas: 0.875rem;
+$grid-filas: 1.25rem;
+
+/* FontSize - Tamaños */
+$número: 0rem;
+$cabecera: 1.5rem;
+$footer: 1.5rem;
+$párrafos: 1.5rem;
+$texto: 2rem;
+$formulario: 2.5rem;
+$títulos: 3rem;
+
+/* Line Heights */
+$line-height-párrafos: 1.625rem;
+$line-height-texto: 2.625rem;
+
+/* Tipografías */
+$tipografía-texto: 'League Spartan', sans-serif;
+$tipografía-título: 'Kalam', cursive;
+
+/* Colores de uso común (alias) */
+$primary-color: $primario-negro;
+$secondary-color: $primario-verde;
+$accent-color: $secundario-rosa;
+$background-color: $primario-amarillo;
+$text-color: $primario-negro;
+
+/* Espaciado base */
+$base-spacing: 1rem;
+$spacing-xs: calc($base-spacing * 0.5);
+$spacing-sm: $base-spacing;
+$spacing-md: calc($base-spacing * 1.5);
+$spacing-lg: calc($base-spacing * 2);
+$spacing-xl: calc($base-spacing * 3);
+$spacing-xxl: calc($base-spacing * 4);
+
+/* Layout container */
+$container-max: 1400px;
+$container-gutter: 20px;
+
+/* Border radius */
+$border-radius-sm: 0.5rem;
+$border-radius-md: 0.75rem;
+$border-radius-lg: 1.25rem;
+$border-radius-circle: 50%;
+
+/* Breakpoints para responsive */
+$breakpoint-mobile: 599px;
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 1200px;

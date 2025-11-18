@@ -1,0 +1,100 @@
+@use "sass:map";
+@use "sass:color";
+@use "variables" as *;
+
+// Mapa de breakpoints
+$breakpoints: (
+  "small": (max-width: $breakpoint-mobile),
+  "medium": (min-width: $breakpoint-tablet) and (max-width: 1199px),
+  "large": (min-width: $breakpoint-desktop)
+);
+
+// Mixin para media queries
+@mixin respond-to($breakpoint) {
+  $raw-query: map.get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: "";
+    @each $prop, $value in $raw-query {
+      @if $query != "" {
+        $query: #{$query} and (#{$prop}: #{$value});
+      } @else {
+        $query: "(#{$prop}: #{$value})";
+      }
+    }
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No se encontró el breakpoint `#{$breakpoint}`. Por favor, verifica que esté definido en `$breakpoints`.';
+  }
+}
+
+// Mixin para botones
+@mixin button($bg-color: $secondary-color, $text-color: $primary-color, $radius: $border-radius-sm) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $spacing-sm $spacing-lg;
+  border: 2px solid $primary-color;
+  border-radius: $radius;
+  font-size: $texto;
+  font-weight: 600;
+
+  &:hover {
+    background-color: color.adjust($bg-color, $lightness: -10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Mixin para flex center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para flex column
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Mixin para cards circulares
+@mixin circular-card($size: 150px) {
+  width: $size;
+  height: $size;
+  border-radius: $border-radius-circle;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mixin para inputs de formulario
+@mixin form-input {
+  width: 100%;
+  padding: $spacing-sm;
+  border: 2px solid $primary-color;
+  border-radius: $border-radius-sm;
+  font-size: $texto;
+  background-color: $secundario-rosa;
+  
+  &::placeholder {
+    color: color.adjust($primary-color, $lightness: 50%);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $secondary-color;
+  }
+}
+
+// Mixin para sombras suaves
+@mixin soft-shadow {
+  box-shadow: 0 4px 12px rgba($primary-color, 0.1);
+}

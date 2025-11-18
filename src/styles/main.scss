@@ -1,0 +1,11 @@
+// IMPORTANTE: @use SIEMPRE debe ir PRIMERO
+@use "globals" as *;
+@use "layout";
+@use "header";
+@use "hero";
+@use "footer";
+@use "landing";
+@use "form";
+
+// Importar fuentes de Google Fonts AL FINAL
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=League+Spartan:wght@400;500;600;700&display=swap');

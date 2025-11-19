@@ -2,32 +2,26 @@
 @use "sass:color";
 @use "variables" as *;
 
-// Mapa de breakpoints
-$breakpoints: (
-  "small": (max-width: $breakpoint-mobile),
-  "medium": (min-width: $breakpoint-tablet) and (max-width: 1199px),
-  "large": (min-width: $breakpoint-desktop)
-);
 
-// Mixin para media queries
-@mixin respond-to($breakpoint) {
-  $raw-query: map.get($breakpoints, $breakpoint);
 
-  @if $raw-query {
-    $query: "";
-    @each $prop, $value in $raw-query {
-      @if $query != "" {
-        $query: #{$query} and (#{$prop}: #{$value});
-      } @else {
-        $query: "(#{$prop}: #{$value})";
-      }
-    }
-
-    @media #{$query} {
+@mixin respond-to($size) {
+  // small = móviles (hasta 599px)
+  @if $size == "small" {
+    @media (max-width: $breakpoint-mobile) {
       @content;
     }
-  } @else {
-    @error 'No se encontró el breakpoint `#{$breakpoint}`. Por favor, verifica que esté definido en `$breakpoints`.';
+  }
+  // medium = tablets (600px a 1199px)
+  @else if $size == "medium" {
+    @media (min-width: $breakpoint-tablet) and (max-width: 1199px) {
+      @content;
+    }
+  }
+  // large = desktop (desde 1200px)
+  @else if $size == "large" {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
   }
 }
 

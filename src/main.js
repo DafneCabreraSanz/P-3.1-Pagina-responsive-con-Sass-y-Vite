@@ -1,7 +1,7 @@
 // Importar estilos
 import './styles/main.scss';
 
-// ===== VALIDACIÓN DE FORMULARIO =====
+// VALIDACIÓN DE FORMULARIO
 const registrationForm = document.getElementById('registrationForm');
 
 if (registrationForm) {
@@ -62,7 +62,7 @@ if (registrationForm) {
         if (isValid) {
             alert('¡Registro exitoso! Bienvenido ' + nombre);
             registrationForm.reset();
-            // Aquí podrías enviar los datos al servidor
+            // Aquí se enviarían los datos al servidor
         } else {
             alert('Por favor, corrige los siguientes errores:\n\n' + errorMessages.join('\n'));
         }

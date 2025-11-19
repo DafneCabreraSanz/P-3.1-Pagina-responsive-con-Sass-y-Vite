@@ -36,40 +36,70 @@
 
 // Sección de categorías
 .categories {
+  padding: 60px 20px;
+  background-color: transparent;
+
   &__grid {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+
+    @include respond-to("medium") {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
     @include respond-to("small") {
       grid-template-columns: repeat(2, 1fr);
-      gap: $spacing-md;
+      gap: 15px;
+      padding: 0 10px;
     }
   }
 
   &__item {
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 
     &:hover {
       transform: translateY(-8px);
-
-      .categories__icon {
-        box-shadow: 0 8px 20px rgba($primary-color, 0.2);
-      }
     }
   }
 
   &__icon {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-to("small") {
+      width: 150px;
+      height: 150px;
+      font-size: 40px;
+    }
+
     img {
-      width: 70%;
       height: 70%;
       object-fit: contain;
+      transform: scale(1.5);
     }
   }
 
   &__label {
+    font-family: $tipografía-texto;
     font-size: $párrafos;
     font-weight: 600;
     color: $text-color;
 
     @include respond-to("small") {
-      font-size: 14px;
+      font-size: &párrafos;
     }
   }
 }
@@ -79,8 +109,8 @@
   display: flex;
   position: relative;
   align-items: center;
-  margin-bottom: 80px;
-  margin-top: 100px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
 
   @include respond-to("medium") {
     flex-direction: column;
@@ -136,6 +166,7 @@
 
   &__content {
     max-width: 450px;
+    padding: 20px;
     z-index: 2;
     text-align: center;
 
@@ -150,8 +181,10 @@
 
   &__title {
     font-family: $tipografía-título;
-    font-size: 3rem;
-    color: $primario-negro;
+    font-size: $títulos;
+    font-weight: 400;
+    color: $text-color;
+    margin: 0 0 16px;
 
     @include respond-to("small") {
       font-size: 2.5rem;
@@ -159,8 +192,10 @@
   }
 
   &__description {
-    font-size: 1.2rem;
-    color: $primario-negro;
+    font-size: $párrafos;
+    font-family: $tipografía-texto;
+    color: $text-color;
+    line-height: 1.6;
 
     @include respond-to("small") {
       font-size: 1rem;
@@ -176,27 +211,24 @@
     background-position: center;
     background-repeat: no-repeat;
     justify-content: left;
-    padding: 20px 0 40px 150px;
-    margin-left: auto;
+    padding: 10px 0 15px 150px;
     margin-right: 0;
+    margin-top: 80px;
 
     .season-section__image-circle {
       right: 150px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: -20px;
 
       @include respond-to("medium") {
         position: relative;
         right: auto;
         top: auto;
-        transform: none;
       }
 
       @include respond-to("small") {
         position: relative;
         right: auto;
         top: auto;
-        transform: none;
       }
     }
   }
@@ -208,26 +240,23 @@
     background-repeat: no-repeat;
     justify-content: right;
     padding: 20px 150px 40px 0;
-    margin-right: auto;
     margin-left: 0;
 
     .season-section__image-circle {
       left: 150px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: -20px;
+
 
       @include respond-to("medium") {
         position: relative;
         left: auto;
         top: auto;
-        transform: none;
       }
 
       @include respond-to("small") {
         position: relative;
         left: auto;
         top: auto;
-        transform: none;
       }
     }
   }
@@ -239,26 +268,22 @@
     background-repeat: no-repeat;
     justify-content: left;
     padding: 20px 0 40px 150px;
-    margin-left: auto;
     margin-right: 0;
 
     .season-section__image-circle {
       right: 150px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: -40px;
 
       @include respond-to("medium") {
         position: relative;
         right: auto;
         top: auto;
-        transform: none;
       }
 
       @include respond-to("small") {
         position: relative;
         right: auto;
         top: auto;
-        transform: none;
       }
     }
   }
@@ -270,26 +295,22 @@
     background-repeat: no-repeat;
     justify-content: right;
     padding: 20px 150px 40px 0;
-    margin-right: auto;
     margin-left: 0;
 
     .season-section__image-circle {
       left: 150px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: -20px;
 
       @include respond-to("medium") {
         position: relative;
         left: auto;
         top: auto;
-        transform: none;
       }
 
       @include respond-to("small") {
         position: relative;
         left: auto;
         top: auto;
-        transform: none;
       }
     }
   }

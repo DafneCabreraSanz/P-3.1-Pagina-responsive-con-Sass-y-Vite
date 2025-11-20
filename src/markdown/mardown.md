@@ -150,7 +150,7 @@ npm run build
 
 ## 9. Enlaces de interés
 
-- [Página desplegada en GitHub Pages](https://github.com/DafneCabreraSanz/P-3.1-P-gina-responsive-con-Sass-y-Vite.git)
+- [Página desplegada en GitHub Pages](https://github.com/DafneCabreraSanz/P-3.1-Pagina-responsive-con-Sass-y-Vite.git)
 - [Diseño en Figma](https://www.figma.com/design/DZKKaGB98078QxxXrHUWea/)
 - [Documentación de Vite](https://vitejs.dev/)
 - [Documentación de SASS](https://sass-lang.com/documentation)

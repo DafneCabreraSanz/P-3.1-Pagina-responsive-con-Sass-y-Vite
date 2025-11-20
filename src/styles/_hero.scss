@@ -14,7 +14,6 @@
   }
 
   @include respond-to ("small") {
-
     &__image {
       max-width: 100%;
     }

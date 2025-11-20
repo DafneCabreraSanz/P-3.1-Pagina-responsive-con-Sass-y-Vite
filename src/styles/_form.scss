@@ -139,7 +139,7 @@
     @include button($secondary-color, $primary-color);
     margin-top: $spacing-md;
     font-size: $texto;
-    padding: $spacing-md $spacing-xl;
+    padding: $spacing-md;
 
     @include respond-to("small") {
       font-size: 16px;

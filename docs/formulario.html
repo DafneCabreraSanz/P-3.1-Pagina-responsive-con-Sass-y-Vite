@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - Algodón de Luna</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <script type="module" crossorigin src="./assets/main-GQVJz4XR.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Dm-3FO99.css">
+</head>
+
+<body>
+    <!-- Banner promocional -->
+    <div class="promo-banner">
+        REGÍSTRATE Y OBTÉN UN 20% AHORA
+    </div>
+
+    <!-- Header simplificado -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__left">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    ← Volver
+                </a>
+            </div>
+
+            <div class="header__logo">
+                <img src="./assets/Logo%20(2)-Dv4qBvNG.svg" alt="Algodón de Luna">
+            </div>
+
+            <div class="header__actions">
+                <!-- Espacio vacío para mantener el centrado -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Formulario -->
+    <main class="form-page">
+        <div class="form-container">
+            <h1 class="form-container__title">CREA TU CUENTA</h1>
+            <p class="form-container__subtitle">¿Cómo quieres que nos dirijamos a ti?</p>
+
+            <form class="form" id="registrationForm">
+                <!-- Nombre y Apellido -->
+                <div class="form__row">
+                    <div class="form__group">
+                        <label for="nombre" class="form__label">Nombre*</label>
+                        <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Nombre*" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="apellido" class="form__label">Apellido*</label>
+                        <input type="text" id="apellido" name="apellido" class="form__input" placeholder="Apellido*"
+                            required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form__group">
+                    <label for="email" class="form__label">Email*</label>
+                    <input type="email" id="email" name="email" class="form__input" placeholder="Email*" required>
+                    <p class="form__hint">
+                        Introduce un email y contraseña para acceder a tu cuenta donde y cuando quieras.
+                    </p>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form__group">
+                    <label for="password" class="form__label">Contraseña*</label>
+                    <input type="password" id="password" name="password" class="form__input" placeholder="Contraseña*"
+                        required minlength="8">
+                    <p class="form__hint">
+                        La contraseña debe contener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un
+                        número.
+                    </p>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form__group">
+                    <label for="telefono" class="form__label">Teléfono*</label>
+                    <input type="tel" id="telefono" name="telefono" class="form__input" placeholder="Teléfono*"
+                        required>
+                    <p class="form__hint">
+                        Añade tu móvil para seguir tus pedidos.
+                    </p>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="form__checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">
+                        Suscríbete a nuestra newsletter.
+                    </label>
+                </div>
+
+                <!-- Política de privacidad -->
+                <div class="form__checkbox-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">
+                        Consiento el tratamiento de mis datos para dar de alta mi cuenta de usuario.
+                        He leído y acepto la <a href="#">Política de Privacidad</a>.
+                    </label>
+                </div>
+
+                <!-- Botón Submit -->
+                <button type="submit" class="form__submit">
+                    GUARDAR
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Columna Izquierda: FAQ, Idioma, Sobre nosotros -->
+            <div class="footer__column footer__column--left">
+                <div class="footer__section">
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Estado de mis pedidos</li>
+                        <li>Devoluciones y reembolsos</li>
+                        <li>Guía tallas</li>
+                    </ul>
+                </div>
+
+                <div class="footer__language">
+                    <img src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.9858%202.83331C9.16581%202.83331%202.83331%209.17998%202.83331%2017C2.83331%2024.82%209.16581%2031.1666%2016.9858%2031.1666C24.82%2031.1666%2031.1666%2024.82%2031.1666%2017C31.1666%209.17998%2024.82%202.83331%2016.9858%202.83331ZM26.8033%2011.3333H22.6241C22.1801%209.57893%2021.5236%207.88529%2020.6691%206.28998C23.2533%207.17965%2025.4308%208.96992%2026.8033%2011.3333ZM17%205.72331C18.1758%207.42331%2019.0966%209.30748%2019.7058%2011.3333H14.2941C14.9033%209.30748%2015.8241%207.42331%2017%205.72331ZM6.03498%2019.8333C5.80831%2018.9266%205.66665%2017.9775%205.66665%2017C5.66665%2016.0225%205.80831%2015.0733%206.03498%2014.1666H10.8233C10.71%2015.1016%2010.625%2016.0366%2010.625%2017C10.625%2017.9633%2010.71%2018.8983%2010.8233%2019.8333H6.03498ZM7.19665%2022.6666H11.3758C11.8291%2024.4375%2012.4808%2026.1375%2013.3308%2027.71C10.7448%2026.8237%208.5662%2025.0325%207.19665%2022.6666ZM11.3758%2011.3333H7.19665C8.5662%208.96741%2010.7448%207.17626%2013.3308%206.28998C12.4764%207.88529%2011.8199%209.57893%2011.3758%2011.3333ZM17%2028.2766C15.8241%2026.5766%2014.9033%2024.6925%2014.2941%2022.6666H19.7058C19.0966%2024.6925%2018.1758%2026.5766%2017%2028.2766ZM20.315%2019.8333H13.685C13.5575%2018.8983%2013.4583%2017.9633%2013.4583%2017C13.4583%2016.0366%2013.5575%2015.0875%2013.685%2014.1666H20.315C20.4425%2015.0875%2020.5416%2016.0366%2020.5416%2017C20.5416%2017.9633%2020.4425%2018.8983%2020.315%2019.8333ZM20.6691%2027.71C21.5191%2026.1375%2022.1708%2024.4375%2022.6241%2022.6666H26.8033C25.4308%2025.03%2023.2533%2026.8203%2020.6691%2027.71ZM23.1766%2019.8333C23.29%2018.8983%2023.375%2017.9633%2023.375%2017C23.375%2016.0366%2023.29%2015.1016%2023.1766%2014.1666H27.965C28.1916%2015.0733%2028.3333%2016.0225%2028.3333%2017C28.3333%2017.9775%2028.1916%2018.9266%2027.965%2019.8333H23.1766Z'%20fill='black'/%3e%3c/svg%3e" alt="Idioma" class="language-icon">
+                    <span>Idioma</span>
+                </div>
+
+                <div class="footer__section">
+                    <ul>
+                        <li>Sobre nosotros</li>
+                        <li>Términos y condiciones</li>
+                        <li>Política de cookies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Columna Centro: Logo -->
+            <div class="footer__column footer__column--center">
+                <img src="./assets/Logo%20(2)-Dv4qBvNG.svg" alt="Algodón de Luna" class="footer__logo-img">
+            </div>
+
+            <!-- Columna Derecha: Redes sociales -->
+            <div class="footer__column footer__column--right">
+                <div class="footer__social-icons">
+                    <a href="#" aria-label="TikTok">
+                        <img src="data:image/svg+xml,%3csvg%20width='27'%20height='31'%20viewBox='0%200%2027%2031'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M20.0095%2011.1622C21.9795%2012.5888%2024.3928%2013.4281%2026.9992%2013.4281V8.34731C26.5059%208.34751%2026.0139%208.29535%2025.5313%208.19167V12.191C22.9251%2012.191%2020.5121%2011.3517%2018.5417%209.92532V20.2939C18.5417%2025.4808%2014.3909%2029.6853%209.27099%2029.6853C7.36064%2029.6853%205.58497%2029.1002%204.10999%2028.0968C5.79348%2029.8406%208.14121%2030.9223%2010.7385%2030.9223C15.8588%2030.9223%2020.0097%2026.7178%2020.0097%2021.5307V11.1622H20.0095ZM21.8204%206.03632C20.8136%204.92214%2020.1525%203.48224%2020.0095%201.89034V1.23688H18.6185C18.9686%203.26011%2020.1631%204.98863%2021.8204%206.03632ZM7.3483%2024.1166C6.78577%2023.3696%206.48171%2022.4555%206.48314%2021.5158C6.48314%2019.1435%208.38168%2017.22%2010.724%2017.22C11.1605%2017.2198%2011.5944%2017.2877%2012.0104%2017.4213V12.2269C11.5242%2012.1595%2011.0336%2012.1307%2010.5432%2012.1413V16.1843C10.1269%2016.0507%209.69278%2015.9828%209.25612%2015.9832C6.91387%2015.9832%205.01543%2017.9064%205.01543%2020.279C5.01543%2021.9566%205.96434%2023.409%207.3483%2024.1166Z'%20fill='%23FF004F'/%3e%3cpath%20d='M18.5417%209.92521C20.5122%2011.3516%2022.925%2012.1909%2025.5314%2012.1909V8.19157C24.0765%207.87761%2022.7887%207.10753%2021.8204%206.03632C20.1629%204.98852%2018.9687%203.26%2018.6185%201.23688H14.9648V21.5304C14.9564%2023.8963%2013.0612%2025.8119%2010.7239%2025.8119C9.34667%2025.8119%208.12302%2025.1469%207.34814%2024.1165C5.96439%2023.409%205.01538%2021.9565%205.01538%2020.2791C5.01538%2017.9068%206.91382%2015.9833%209.25607%2015.9833C9.70484%2015.9833%2010.1374%2016.054%2010.5431%2016.1844V12.1414C5.51309%2012.2467%201.46783%2016.4101%201.46783%2021.5305C1.46783%2024.0867%202.47517%2026.4039%204.11014%2028.097C5.58512%2029.1002%207.36069%2029.6855%209.27115%2029.6855C14.3911%2029.6855%2018.5419%2025.4807%2018.5419%2020.2939L18.5417%209.92521Z'%20fill='black'/%3e%3cpath%20d='M25.5313%208.19148V7.11033C24.2194%207.11226%2022.9334%206.74009%2021.8203%206.03634C22.8056%207.12905%2024.103%207.88258%2025.5313%208.1917M18.6184%201.23679C18.585%201.04348%2018.5594%200.848874%2018.5416%200.653459V0H13.4966V20.2938C13.4886%2022.6594%2011.5933%2024.575%209.25594%2024.575C8.5933%2024.576%207.93973%2024.419%207.34801%2024.1167C8.12289%2025.1469%209.34654%2025.8118%2010.7237%2025.8118C13.0609%2025.8118%2014.9564%2023.8964%2014.9646%2021.5306V1.2369L18.6184%201.23679ZM10.5433%2012.1413V10.9901C10.1217%2010.9318%209.69672%2010.9026%209.27123%2010.9027C4.15072%2010.9027%200%2015.1074%200%2020.2938C0%2023.5455%201.63129%2026.4111%204.11022%2028.0968C2.47525%2026.4038%201.46791%2024.0865%201.46791%2021.5305C1.46791%2016.4101%205.51306%2012.2466%2010.5433%2012.1413Z'%20fill='%2300F2EA'/%3e%3c/svg%3e" alt="TikTok">
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <img src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M34%2017C34%207.61122%2026.3888%200%2017%200C7.61122%200%200%207.61122%200%2017C0%2025.4851%206.21669%2032.5182%2014.3438%2033.7935V21.9141H10.0273V17H14.3438V13.2547C14.3438%208.99406%2016.8818%206.64062%2020.765%206.64062C22.6249%206.64062%2024.5703%206.97266%2024.5703%206.97266V11.1562H22.4267C20.3149%2011.1562%2019.6562%2012.4667%2019.6562%2013.8112V17H24.3711L23.6174%2021.9141H19.6562V33.7935C27.7833%2032.5182%2034%2025.4853%2034%2017Z'%20fill='%231877F2'/%3e%3cpath%20d='M23.6174%2021.9141L24.3711%2017H19.6562V13.8112C19.6562%2012.4666%2020.3149%2011.1562%2022.4267%2011.1562H24.5703V6.97266C24.5703%206.97266%2022.6249%206.64062%2020.7648%206.64062C16.8818%206.64062%2014.3438%208.99406%2014.3438%2013.2547V17H10.0273V21.9141H14.3438V33.7935C15.2225%2033.9312%2016.1106%2034.0002%2017%2034C17.8894%2034.0002%2018.7775%2033.9312%2019.6562%2033.7935V21.9141H23.6174Z'%20fill='white'/%3e%3c/svg%3e" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="./assets/skill-icons_instagram-BKwpEW8n.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -4,6 +4,8 @@ import { resolve } from "path";
 export default defineConfig({
     root: "./src", // no olvidemos cambiar la raíz del proyecto a "src"
     build: {
+        outDir: "../docs", // Directorio de salida para GitHub Pages
+        emptyOutDir: true, // Limpia el directorio antes de construir
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "./src/index.html"), // Página principal

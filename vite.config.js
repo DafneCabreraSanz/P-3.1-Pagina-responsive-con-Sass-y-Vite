@@ -1,9 +1,16 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
-    root: "./src",
+    root: "./src", // no olvidemos cambiar la raíz del proyecto a "src"
     build: {
-        outDir: "../docs",
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, "./src/index.html"), // Página principal
+                formulario: resolve(__dirname, "./src/formulario.html"), // Otra página
+                // Añade más entradas si es necesario
+            },
+        },
     },
-    base: "./",
+    base: "./", // Opcional: rutas relativas para mayor compatibilidad
 });
